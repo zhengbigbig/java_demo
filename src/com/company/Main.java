@@ -1,0 +1,26 @@
+package com.company;
+
+import java.io.*;
+
+public class Main {
+
+    public static void main(String[] args) throws IOException {
+
+        //将一个文件内容输出到另一个文件
+        FileInputStream input = new FileInputStream("res/input.txt");
+        FileOutputStream output = new FileOutputStream("res/output.txt");
+
+        InputStreamReader reader = new InputStreamReader(input,"UTF-8");
+        OutputStreamWriter writer = new OutputStreamWriter(output,"UTF-8");
+
+        int ch;
+        while ((ch = reader.read()) != -1){
+            writer.write(ch);
+        }
+
+        reader.close();  //close掉 表示告诉程序结束了读写  依次关闭  避免依赖先关闭
+        input.close();
+        writer.close();
+        output.close();
+    }
+}
