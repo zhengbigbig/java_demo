@@ -1,5 +1,7 @@
 package com.company;
 
+import org.apache.commons.io.FileUtils;
+
 import java.io.*;
 
 public class Main {
@@ -22,5 +24,11 @@ public class Main {
         input.close();
         writer.close();
         output.close();
+
+        //IO Utils
+        File inputFile = new File("res/input.txt");
+        String content = FileUtils.readFileToString(inputFile);
+        System.out.println(content);
+
     }
 }
