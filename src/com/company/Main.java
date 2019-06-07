@@ -3,6 +3,7 @@ package com.company;
 import org.apache.commons.io.FileUtils;
 
 import java.io.*;
+import java.util.ArrayList;
 
 public class Main {
 
@@ -31,7 +32,7 @@ public class Main {
 //        System.out.println(content);
 
         News news = new News("abc","blala");
-        System.out.println(news.display());
+
 
         FileNews fileNews = new FileNews("abc","bababa");
         fileNews.display();
@@ -39,5 +40,24 @@ public class Main {
         fileNews1.read("/res/input.txt");
 
         Child a = new Child();
+
+
+        // interface Displayable接口是定义  可以显示  但是具体的实现是在类里面  这就是多态
+        News news1 = new News("abc","父类");
+
+        Video video = new Video();
+
+        viewNews(news1);
+        viewNews(video);
+
+
+
+
+    }
+
+    private static void viewNews(Displayable item){
+            item.display();
+            System.out.println("播放完毕");
+
     }
 }
