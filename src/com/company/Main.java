@@ -27,9 +27,17 @@ public class Main {
 
         //IO Utils
         File inputFile = new File("res/input.txt");
-        String content = FileUtils.readFileToString(inputFile);
-        System.out.println(content);
+//        String content = FileUtils.readFileToString(inputFile);
+//        System.out.println(content);
 
+        News news = new News("abc","blala");
+        System.out.println(news.display());
 
+        FileNews fileNews = new FileNews("abc","bababa");
+        fileNews.display();
+        FileNews fileNews1 = new FileNews(); // 直接调用 需要super去初始化News 再初始化FileNews
+        fileNews1.read("/res/input.txt");
+
+        Child a = new Child();
     }
 }
