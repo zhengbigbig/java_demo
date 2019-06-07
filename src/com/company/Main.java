@@ -55,6 +55,7 @@ public class Main {
 
     }
 
+    // interface Displayable 实现过程
     private static void viewNews(Displayable item){
             item.display();
             System.out.println("播放完毕");
