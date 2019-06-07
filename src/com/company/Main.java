@@ -48,7 +48,7 @@ public class Main {
         Video video = new Video();
 
         viewNews(news1);
-        viewNews(video);
+        viewVideo(video);
 
 
 
@@ -59,6 +59,11 @@ public class Main {
     private static void viewNews(Displayable item){
             item.display();
             System.out.println("播放完毕");
+
+    }
+    private static void viewVideo(Displayable item){
+        item.display();
+        System.out.println("播放完毕");
 
     }
 }
