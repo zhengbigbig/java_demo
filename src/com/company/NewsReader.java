@@ -2,7 +2,11 @@ package com.company;
 
 public abstract class NewsReader {
 
-    public abstract News readNews(String path); // 具有这个功能  但具体的实现，在子类中确定
+    public News readNews(String path){
+        System.out.println("来自父类");
+        return null;
+    }
+    // 具有这个功能  但具体的实现，在子类中确定
 
     // 1.文件、类
     // 纯文本、word、json、xml ->类

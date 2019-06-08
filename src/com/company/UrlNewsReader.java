@@ -1,6 +1,6 @@
 package com.company;
 
-public class FileNewsReader extends NewsReader {
+public class UrlNewsReader extends NewsReader {
     @Override
     public News readNews(String path) {
         super.readNews(path);

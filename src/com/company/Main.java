@@ -49,12 +49,19 @@ public class Main {
 
         viewNews(news1);
         viewVideo(video);
+        Displayable displayable = new Video();
+        displayable.display();
+        //多态
 
-
+        News news2 = read(new FileNewsReader(),"path_sample");
+        News news3 = read(new UrlNewsReader(),"path_sample");
 
 
     }
-
+    //多态
+    private static News read(NewsReader reader,String path){
+        return reader.readNews(path);
+    }
     // interface Displayable 实现过程
     private static void viewNews(Displayable item){
             item.display();
@@ -66,4 +73,6 @@ public class Main {
         System.out.println("播放完毕");
 
     }
+
+
 }
