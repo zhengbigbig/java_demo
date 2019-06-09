@@ -42,6 +42,18 @@ public class Main {
         //检查是否为空
         stack.empty();
 
+        // 队列
+
+        Queue<Integer> queue = new LinkedList<Integer>();
+
+        queue.add(3);
+        queue.add(5);
+
+        System.out.println(queue.poll()); //3
+        System.out.println(queue.poll()); //5
+
+        Integer first_of_queue = queue.peek();
+        queue.isEmpty();
 
 
     }
