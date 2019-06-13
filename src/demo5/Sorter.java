@@ -9,6 +9,7 @@ public class Sorter {
         int i = left, j = right;
         int tmp = input.get(left);
         while (i < j) {
+            //先从右边扫描再从左边，依次
             while (i < j && input.get(j) >= tmp) {
                 j--;
             }
@@ -34,6 +35,8 @@ public class Sorter {
         if (i < right) {
             qsort(j + 1, right, input);
         }
+
+
     }
 
 
