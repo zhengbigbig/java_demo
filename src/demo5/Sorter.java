@@ -9,7 +9,7 @@ public class Sorter {
         int i = left, j = right;
         int tmp = input.get(left);
         while (i < j) {
-            //先从右边扫描再从左边，依次
+            //先从右边扫描再从左边，依次得到结果
             while (i < j && input.get(j) >= tmp) {
                 j--;
             }
