@@ -41,5 +41,10 @@ public class Main {
         for(String item: set){
             System.out.println(item);
         }
+
+        FindDifference findDifference = new FindDifference();
+        String s = "abcd";
+        String t = "abcde";
+        System.out.println(findDifference.findTheDifference(s,t));
     }
 }

@@ -14,4 +14,6 @@ public class IntStack {
         store.remove(store.size() - 1);
         return tmp;
     }
+
+
 }

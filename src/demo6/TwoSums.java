@@ -20,5 +20,6 @@ public class TwoSums {
                 return results;
             }
         }
+        return new ArrayList<>();
     }
 }
