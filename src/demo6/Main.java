@@ -46,5 +46,12 @@ public class Main {
         String s = "abcd";
         String t = "abcde";
         System.out.println(findDifference.findTheDifference(s,t));
+
+        MinStack minStack = new MinStack();
+        minStack.push(5);
+        minStack.push(4);
+        minStack.push(3);
+        minStack.push(1);
+        System.out.println(minStack.getMin());
     }
 }
